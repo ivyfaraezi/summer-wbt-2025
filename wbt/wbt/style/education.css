@@ -1,0 +1,31 @@
+/* Education */
+.education-section {
+  margin-left: 300px;
+  margin-right: 300px;
+}
+.education-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: auto;
+  text-align: center;
+}
+.edu {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #4e47ff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  transition: all 0.5s ease-in-out;
+}
+.edu:hover {
+  box-shadow: 0 8px 20px #4e47ff;
+  transform: scale(1.03);
+}
+
+.edu img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  margin-right: 20px;
+}

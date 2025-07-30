@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.blue {
+  color: #4E47FF;
+}
+body {
+    background-image: url(../image/Hero-bg.png);
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 5rem;
+}
+.nav-title {
+    font-size: 2.8125rem;
+    font-weight: 800;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+}
+nav ul li {
+    list-style: none;
+    margin-right: 3.1875rem;
+}
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+nav a{
+    text-decoration: none;
+}
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 200px;
+    margin-left: 150px;
+}
+.home-content{
+    max-width: 36.5625rem;
+}
+.home-name {
+    font-size: 5.3125rem;
+    text-emphasis: none;
+    text-align: right;
+    font-weight: 800;
+    margin: auto;
+}
+.home-description {
+    text-align: justify;
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+.home-profile-pic {
+    width: 608px;
+}
+.social-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    transition: transform 0.3s ease;
+    transform: scale(1);
+}
