@@ -1,45 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Me</title>
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/contactme.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../style/contactme.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <a href="../index.html"><h1 class="nav-title inter blue">IVY</h1></a>
-            <ul>
-                <li><a class="inter blue" href="education.html">Education</a></li>
-                <li><a class="inter blue" href="experience.html">Experience</a></li>
-                <li><a class="inter blue" href="projects.html">Projects</a></li>
-                <li><a class="inter blue" href="contactme.html">Contact Me</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <a href="../index.html"><h1 class="nav-title inter blue">IVY</h1></a>
+        <ul>
+          <li><a class="inter blue" href="education.html">Education</a></li>
+          <li><a class="inter blue" href="experience.html">Experience</a></li>
+          <li><a class="inter blue" href="projects.html">Projects</a></li>
+          <li><a class="inter blue" href="contactme.html">Contact Me</a></li>
+        </ul>
+      </nav>
     </header>
-        <section class="contact-section">
-            <h1 class="contact-title inter">Contact Me</h1>
+    <section class="contact-section">
+      <h1 class="contact-title inter">Contact Me</h1>
 
-            <form class="contact-form" action="">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      <form class="contact-form" action="">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        />
 
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
+        <label for="subject">Subject</label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          placeholder="Enter subject"
+          required
+        />
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+        <label for="mobile">Mobile</label>
+        <input
+          type="tel"
+          id="mobile"
+          name="mobile"
+          placeholder="Enter your mobile number"
+          required
+        />
 
-                <button type="submit" class="btn">Submit</button>
-            </form>
-        </section>
+        <label for="web">What type of website are you looking for?</label>
+        <select name="web-type" id="web-type" required>
+          <option value="">Select Website Type</option>
+          <option value="port">Personal Portfolio</option>
+          <option value="bus">Business Website</option>
+          <option value="ecom">E-Commerce Store</option>
+        </select>
+
+        <label for="seo">What SEO service are you looking for?</label>
+        <select name="seo-type" id="seo-type" required>
+          <option value="">Select SEO Service</option>
+          <option value="on_page">On-Page SEO</option>
+          <option value="off_page">Off-Page SEO</option>
+          <option value="keyword">Keyword Research</option>
+          <option value="site_audit">Site Audit</option>
+        </select>
+
+        <label for="consultation">What do you need consultation for?</label>
+        <select name="consultation" id="consultation" required>
+          <option value="">Select Consultation Topic</option>
+          <option value="project_planning">Project Planning</option>
+          <option value="technology_stack">Technology Stack</option>
+          <option value="design_suggestions">Design Suggestions</option>
+          <option value="career_guidance">Career Guidance</option>
+        </select>
+
+        <label for="maintenance">What kind of maintenance do you need?</label>
+        <select name="maintenance" id="maintenance" required>
+          <option value="">Select Maintenance Topic</option>
+          <option value="fix_bugs">Fix Bugs</option>
+          <option value="update_content">Update Content</option>
+          <option value="security_improvements">Security Improvements</option>
+          <option value="performance_optimization">
+            Performance Optimization
+          </option>
+        </select>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </section>
     <footer>
-        <p class="inter">&copy; 2025 All rights reserved by N. F. IVY</p>
+      <p class="inter">&copy; 2025 All rights reserved by N. F. IVY</p>
     </footer>
-</body>
+    <script src="../data/validation.js"></script>
+    <script>
+      document.querySelector(".contact-form").onsubmit = function (e) {
+        e.preventDefault();
+        const data = {
+          name: document.getElementById("name").value,
+          subject: document.getElementById("subject").value,
+          email: document.getElementById("email").value,
+          mobile: document.getElementById("mobile").value,
+          jobType: document.getElementById("web-type").value,
+          supportType: document.getElementById("seo-type").value,
+          partnershipType: document.getElementById("consultation").value,
+          message: document.getElementById("maintenance").value,
+        };
+        saveContactData(data);
+        window.location.href = "login.html";
+      };
+    </script>
+  </body>
 </html>
