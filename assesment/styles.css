@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #333;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #333;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.logo-container img {
+  height: 40px;
+  margin-right: 10px;
+}
+.nav-links a {
+  margin: 0 10px;
+}
+main {
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+footer {
+  text-align: center;
+  border: 2px solid #333;
+}
